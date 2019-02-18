@@ -1,5 +1,10 @@
 @import '../base/index.less';
 
+
+.backBg(@name){
+  background: url('./../../images/icons/@{name}@3x.png') no-repeat 0 0;
+}
+
 .icon {
   float: left;
 
@@ -40,9 +45,30 @@
     }
   }
 
-  //分享-白色图标
+  //灰色图标
+  &.gray {
+    .num {
+      color: @titleColor;
+    }
+
+    //收藏
+    &.collection {
+      &:before {
+        //background: url('./../../images/icons/icon-collection-gray@3x.png') no-repeat 0 0;
+        .backBg('icon-collection-gray');
+      }
+    }
+
+    //浏览
+    &.view {
+      &:before {
+        background: url('./../../images/icons/icon-like-gray@3x.png') no-repeat 0 0;
+      }
+    }
+  }
 
 
+  //白色图标
   &.white {
     .num {
       color: @white;

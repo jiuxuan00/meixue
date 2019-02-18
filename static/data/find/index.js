@@ -93,7 +93,7 @@ export default {
     }
   ],
   // 大V
-  1:[
+  1: [
     {
       "id": 1,
       "username": "大V标题1",
@@ -138,10 +138,10 @@ export default {
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
       "time": "2019年2月14日"
-    },
+    }
   ],
   // 当下
-  2:[
+  2: [
     {
       "id": 1,
       "username": "当下标题1",
@@ -186,10 +186,10 @@ export default {
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
       "time": "2019年2月14日"
-    },
+    }
   ],
   // 活动
-  3:[
+  3: [
     {
       "id": 1,
       "name": "活动标题1",
@@ -197,7 +197,9 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/activity1.jpg",
-      "time": "type日期，例2月3日"
+      "time": "type日期，例2月3日",
+      "likeNum": 111,
+      "viewNum": 222
     },
     {
       "id": 2,
@@ -206,7 +208,9 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/activity1.jpg",
-      "time": "type日期，例2月3日"
+      "time": "type日期，例2月3日",
+      "likeNum": 111,
+      "viewNum": 222
     },
     {
       "id": 3,
@@ -215,7 +219,9 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/activity1.jpg",
-      "time": "type日期，例2月3日"
+      "time": "type日期，例2月3日",
+      "likeNum": 111,
+      "viewNum": 222
     },
     {
       "id": 4,
@@ -224,7 +230,9 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/activity1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "likeNum": 111,
+      "viewNum": 222
     },
     {
       "id": 5,
@@ -233,7 +241,9 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/activity1.jpg",
-      "time": "2019年2月14日"
-    },
-  ],
+      "time": "2019年2月14日",
+      "likeNum": 111,
+      "viewNum": 222
+    }
+  ]
 };

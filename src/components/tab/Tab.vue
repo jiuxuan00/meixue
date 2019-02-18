@@ -39,7 +39,7 @@
     },
     data() {
       return {
-        index: 3,
+        index: 0,
         slideOptions: {
           listenScroll: true,
           probeType: 3,
