@@ -1,0 +1,49 @@
+.border-radius(@radius:50%) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+//设置显示几行，末尾使用...
+.lineClamp(@height;@num) {
+  height: @height;
+  line-height: @height/2;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+//背景
+.back_images(@url, @w, @h) {
+  background: url(@url) no-repeat;
+  background-size: @w @h;
+}
+
+//定位
+.pos(@p, @t, @r, @b, @l, @w, @h, @color, @z-i){
+  position: @p;
+  top: @t;
+  right: @r;
+  bottom: @b;
+  left: @l;
+  width: @w;
+  height: @h;
+  background: @color;
+  z-index: @z-i;
+}
+
+//三角白色图标 向上
+.icon-arror-top-white(@bottom) {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: @white;
+  position: absolute;
+  bottom: @bottom;
+  left: 50%;
+  margin-left: -9px;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+

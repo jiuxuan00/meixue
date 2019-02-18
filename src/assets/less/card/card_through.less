@@ -1,0 +1,41 @@
+@import '../base/index.less';
+
+.card-through {
+  width: 100%;
+  padding: 0 16px;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  float: left;
+
+  .pic {
+    width: 344px;
+    height: 180px;
+  }
+
+  .main {
+    width: 100%;
+    padding: 10px 0;
+    white-space: normal;
+    background: #fff;
+    float: left;
+
+    .name {
+      span {
+        border-bottom: 1px solid @titleColor;
+      }
+    }
+
+    .desc {
+      padding: 0 30px;
+      margin: 8px 0;
+      line-height: 20px;
+      .lineClamp(40px, 2);
+    }
+
+    .time {
+      padding: 6px 0;
+    }
+  }
+}

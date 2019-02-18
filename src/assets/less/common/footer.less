@@ -1,0 +1,71 @@
+@charset "utd-8";
+@import "./../base/index.less";
+
+@iconUrl: './../../images/footer/';
+
+//二次封装背景图
+.backBg(@iconName) {
+  .back_images("@{iconUrl}@{iconName}", 24px, 24px);
+}
+
+.footer {
+  .pos(fixed, auto, auto, 0, 0, 100%, 52px, #fff, 1);
+  display: flex;
+
+  .item {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 27px;
+    margin-top: 8px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -12px;
+      background: #fff;
+    }
+
+    .text {
+      font-size: 10px;
+      color: @grayColor;
+    }
+
+    &.home .icon {
+      .backBg("home-default@3x.png");
+    }
+    &.find .icon {
+      .backBg("find-default@3x.png");
+    }
+
+    &.good .icon {
+      .backBg("good-default@3x.png");
+    }
+
+    &.my .icon {
+      .backBg("my-default@3x.png");
+    }
+
+    &.router-link-active {
+      &.home .icon {
+        .backBg("home-selected@3x.png");
+      }
+      &.find .icon {
+        .backBg("find-selected@3x.png");
+      }
+      &.good .icon {
+        .backBg("good-selected@3x.png");
+      }
+      &.my .icon {
+        .backBg("my-selected@3x.png");
+      }
+      .text {
+        color: @titleColor;
+      }
+    }
+  }
+}
+

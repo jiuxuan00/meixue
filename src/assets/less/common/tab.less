@@ -1,0 +1,38 @@
+@import '../base/index.less';
+
+.tab{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .cube-tab-bar {
+      padding:0 30px!important;
+      background: #fff;
+      .cube-tab {
+        position: relative;
+        height: 33px;
+        line-height: 33px;
+        padding: 0;
+        &:after {
+          content:'';
+          width: 90%;
+          height:2px;
+          background: @selectedColor!important;
+          position: absolute;
+          left: 0;
+          bottom:0;
+          display: none;
+        }
+        &_active {
+          color: @selectedColor!important;
+          &:after {
+            display: block
+          }
+        }
+      }
+    }
+
+    .slide-wrapper {
+      flex: 1;
+      overflow: hidden;
+    }
+}

@@ -1,0 +1,67 @@
+@import '../base/index.less';
+
+.icon {
+  float: left;
+
+  .num {
+    height: 20px;
+    line-height: 21px;
+    float: left;
+    margin-left: 2px;
+  }
+
+  &:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px !important;
+    float: left;
+  }
+
+  //分享-灰色图标
+  &.share {
+    &:before {
+      background: url('./../../images/icons/square_share_black@3x.png') no-repeat 0 0;
+    }
+  }
+
+  //评论-灰色图标
+  &.comment {
+    &:before {
+      background: url('./../../images/icons/square_comment_black@3x.png') no-repeat 0 0;
+      margin-left: 10px;
+    }
+  }
+
+  //分享-喜欢图标
+  &.like {
+    &:before {
+      background: url('./../../images/icons/square_heart_black@3x.png') no-repeat 0 0;
+    }
+  }
+
+  //分享-白色图标
+
+
+  &.white {
+    .num {
+      color: @white;
+    }
+
+    //喜欢
+    &.like {
+      &:before {
+        background: url('./../../images/icons/icon-like-white@3x.png') no-repeat 0 0;
+      }
+    }
+
+    //浏览
+    &.view {
+      &:before {
+        background: url('./../../images/icons/icon-view-white@3x.png') no-repeat 0 0;
+      }
+    }
+  }
+
+
+}
