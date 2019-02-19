@@ -2,15 +2,13 @@
     <div class="card-average">
         <div class="head"><img :src="data.avatar" alt=""><span>{{data.username}}</span></div>
         <div class="item">
-            <router-link tag="a" :to="{path:data.href}">
-                <img :src="data.pic" alt="">
-            </router-link>
+            <router-link tag="a" :to="{path:data.href, query:{username:data.username}}"><img :src="data.pic" alt=""></router-link>
             <div class="main">
                 <div class="title">{{data.title}}</div>
                 <div class="handles">
-                    <div class="con" v-for="(item,index) in icons" :key="index" @click="onHandleIcon(data, item.type)">
-                        <icon :data="item"/>
-                    </div>
+                    <icon className="gray share"/>
+                    <icon className="gray comment" :count="data.comment_count"/>
+                    <icon className="gray like" :count="data.like_count"/>
                 </div>
             </div>
         </div>
@@ -28,15 +26,6 @@
           return {};
         }
       }
-    },
-    data() {
-      return {
-        icons: [
-          { className: "gray share", type: "share" },
-          { className: "gray comment", count: 0, type: "comment" },
-          { className: "gray like", count: 0, type: "like" }
-        ]
-      };
     },
     components: {
       Icon

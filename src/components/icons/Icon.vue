@@ -1,19 +1,12 @@
 <template>
-    <div class="icon" :class="data.className">
-        <span class="num">{{data.count}}</span>
+    <div class="icon" :class="className">
+        <span class="num">{{count}}</span>
     </div>
 </template>
 
 <script>
   export default {
-    props: {
-      data: {
-        type: Object,
-        default() {
-          return {};
-        }
-      }
-    },
+    props: ["className", "count"],
     methods: {}
   };
 </script>

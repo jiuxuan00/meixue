@@ -36,8 +36,7 @@
       }
     }
 
-    &:after {
-      content: '';
+    .back {
       width: 24px;
       height: 24px;
       .back_images("../../images/icons/back-arrow-left-white.png", 24px, 24px);
@@ -94,6 +93,20 @@
       top: 50%;
       right: 20px;
       margin-top: -30px;
+    }
+  }
+
+  .handles {
+    width: 100%;
+    padding: 20px;
+    float: left;
+    .icon {
+      &.comment:before {
+        margin-left: 24px;
+      }
+      &.like {
+        float: right;
+      }
     }
   }
 }
