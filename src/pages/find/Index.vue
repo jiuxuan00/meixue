@@ -14,26 +14,10 @@
     data() {
       return {
         tabs: [
-          {
-            label: "精选",
-            component: FindAverage,
-            data: findData[0]
-          },
-          {
-            label: "大V",
-            component: FindAverage,
-            data: findData[1]
-          },
-          {
-            label: "当下",
-            component: FindAverage,
-            data: findData[2]
-          },
-          {
-            label: "活动",
-            component: FindActivity,
-            data: findData[3]
-          }
+          { label: "精选", component: FindAverage, data: findData[0] },
+          { label: "大V", component: FindAverage, data: findData[1] },
+          { label: "当下", component: FindAverage, data: findData[2] },
+          { label: "活动", component: FindActivity, data: findData[3] }
         ]
       };
     },

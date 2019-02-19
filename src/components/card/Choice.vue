@@ -1,7 +1,8 @@
 <template>
     <div class="card-average">
         <div class="head"><img :src="data.avatar" alt=""><span>{{data.username}}</span></div>
-        <div class="item">
+        <!--<div>-->
+        <router-link tag="div" class="item" :to="{path:data.href}">
             <img :src="data.pic" alt="">
             <div class="main">
                 <div class="title">{{data.title}}</div>
@@ -12,7 +13,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </router-link>
+        <!--</div>-->
     </div>
 </template>
 
@@ -44,7 +46,7 @@
       onHandleIcon(name, id) {
         switch (name) {
           case "share":
-            alert("我是分享"+id);
+            alert("我是分享" + id);
             break;
           case "comment":
             alert("我是评论");

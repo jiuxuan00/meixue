@@ -20,6 +20,12 @@ export default new Router({
       name: "Find",
       component: () => import("@/pages/find/Index.vue")
     },
+    //发现 活动详情
+    {
+      path: "/find/activity/:id",
+      name: "FindActivity",
+      component: () => import("@/pages/details/FindActivityDetail.vue")
+    },
     //好物
     {
       path: "/good",

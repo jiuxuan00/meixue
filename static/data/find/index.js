@@ -8,7 +8,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 3,
@@ -26,7 +28,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 4,
@@ -35,7 +38,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 5,
@@ -44,7 +48,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 6,
@@ -53,7 +58,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 7,
@@ -62,7 +68,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 8,
@@ -71,7 +78,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     },
     {
       "id": 9,
@@ -80,7 +88,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/9"
     },
     {
       "id": 10,
@@ -89,7 +98,8 @@ export default {
       "isEnd": true,
       "avatar": "/static/images/default/avatar-pink@3x.png",
       "pic": "/static/pics/find/card1.jpg",
-      "time": "2019年2月14日"
+      "time": "2019年2月14日",
+      "href": "/find/activity/"
     }
   ],
   // 大V
