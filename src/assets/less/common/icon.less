@@ -26,14 +26,14 @@
   //分享-灰色图标
   &.share {
     &:before {
-      background: url('./../../images/icons/square_share_black@3x.png') no-repeat 0 0;
+      .backBg('share-gray');
     }
   }
 
   //评论-灰色图标
   &.comment {
     &:before {
-      background: url('./../../images/icons/square_comment_black@3x.png') no-repeat 0 0;
+      .backBg('comment-gray');
       margin-left: 10px;
     }
   }
@@ -41,7 +41,7 @@
   //分享-喜欢图标
   &.like {
     &:before {
-      background: url('./../../images/icons/square_heart_black@3x.png') no-repeat 0 0;
+      .backBg('like-gray');
     }
   }
 
@@ -54,7 +54,6 @@
     //收藏
     &.collection {
       &:before {
-        //background: url('./../../images/icons/icon-collection-gray@3x.png') no-repeat 0 0;
         .backBg('icon-collection-gray');
       }
     }
@@ -62,7 +61,7 @@
     //浏览
     &.view {
       &:before {
-        background: url('./../../images/icons/icon-like-gray@3x.png') no-repeat 0 0;
+        .backBg('icon-like-gray');
       }
     }
   }
@@ -77,14 +76,14 @@
     //喜欢
     &.like {
       &:before {
-        background: url('./../../images/icons/icon-like-white@3x.png') no-repeat 0 0;
+        .backBg('icon-like-white');
       }
     }
 
     //浏览
     &.view {
       &:before {
-        background: url('./../../images/icons/icon-view-white@3x.png') no-repeat 0 0;
+        .backBg('icon-view-white');
       }
     }
   }

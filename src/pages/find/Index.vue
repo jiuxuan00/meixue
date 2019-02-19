@@ -11,15 +11,22 @@
   import findData from "../../../static/data/find/index.js";
 
   export default {
-    data() {
-      return {
-        tabs: [
-          { label: "精选", component: FindAverage, data: findData[0] },
-          { label: "大V", component: FindAverage, data: findData[1] },
-          { label: "当下", component: FindAverage, data: findData[2] },
-          { label: "活动", component: FindActivity, data: findData[3] }
-        ]
-      };
+    computed: {
+      tabs() {
+        let tabData = findData;
+        //处理tab精选
+        tabData[0].map(item => item.href = "/find/choice/" + item.id);
+        tabData[1].map(item => item.href = "/find/choice/" + item.id);
+        tabData[2].map(item => item.href = "/find/choice/" + item.id);
+        tabData[3].map(item => item.href = "/find/activity/" + item.id);
+
+        return [
+          { label: "精选", component: FindAverage, data: tabData[0] },
+          { label: "大V", component: FindAverage, data: tabData[1] },
+          { label: "当下", component: FindAverage, data: tabData[2] },
+          { label: "活动", component: FindActivity, data: tabData[3] }
+        ];
+      }
     },
     components: {
       FindAverage,

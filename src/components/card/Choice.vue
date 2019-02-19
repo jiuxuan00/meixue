@@ -1,20 +1,19 @@
 <template>
     <div class="card-average">
         <div class="head"><img :src="data.avatar" alt=""><span>{{data.username}}</span></div>
-        <!--<div>-->
-        <router-link tag="div" class="item" :to="{path:data.href}">
-            <img :src="data.pic" alt="">
+        <div class="item">
+            <router-link tag="a" :to="{path:data.href}">
+                <img :src="data.pic" alt="">
+            </router-link>
             <div class="main">
                 <div class="title">{{data.title}}</div>
                 <div class="handles">
-                    <div v-for="(icon,index) in icons" :key="index" :icon="icon"
-                         @click="onHandleIcon(icon.className, data.id)">
-                        <icon :icon="icon"/>
+                    <div class="con" v-for="(item,index) in icons" :key="index" @click="onHandleIcon(data, item.type)">
+                        <icon :data="item"/>
                     </div>
                 </div>
             </div>
-        </router-link>
-        <!--</div>-->
+        </div>
     </div>
 </template>
 
@@ -33,9 +32,9 @@
     data() {
       return {
         icons: [
-          { className: "share" },
-          { className: "comment", num: 0 },
-          { className: "zan", num: 0 }
+          { className: "gray share", type: "share" },
+          { className: "gray comment", count: 0, type: "comment" },
+          { className: "gray like", count: 0, type: "like" }
         ]
       };
     },
@@ -43,18 +42,22 @@
       Icon
     },
     methods: {
-      onHandleIcon(name, id) {
-        switch (name) {
+      /**
+       * 事件分享、评论、喜欢
+       * @param data 当前数据
+       * @param type 当前点击的类型
+       */
+      onHandleIcon(data, type) {
+        console.log(type);
+        switch (type) {
           case "share":
-            alert("我是分享" + id);
+            alert("我是分享" + "---" + data.title);
             break;
           case "comment":
-            alert("我是评论");
+            alert("我是评论" + "---" + data.title);
             break;
-          case "zan":
-            alert("我是点赞");
-            break;
-          default:
+          case "like":
+            alert("我是喜欢" + "---" + data.title);
             break;
         }
       }

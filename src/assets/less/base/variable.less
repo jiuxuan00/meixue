@@ -5,7 +5,13 @@
 }
 
 //设置显示几行，末尾使用...
-.lineClamp(@height;@num) {
+.lineOne(@height){
+  height: @height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lineClamp(@height; @num) {
   height: @height;
   line-height: @height/2;
   -webkit-line-clamp: @num;
