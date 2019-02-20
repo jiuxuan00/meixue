@@ -5,17 +5,14 @@
             <div class="main">
                 <div class="text">{{data.title}}</div>
                 <div class="desc">{{data.subTitle}}</div>
-                <div class="icons">
-                    <icon className="white like" :num="data.likeNum"></icon>
-                    <icon className="white view" :num="data.viewNum"></icon>
-                </div>
+                <slot name="icons"></slot>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-  import Icon from "./../icons/Icon";
+
 
   export default {
     name: "FullList",
@@ -28,7 +25,6 @@
       }
     },
     components:{
-      Icon
     }
   };
 </script>

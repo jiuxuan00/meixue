@@ -1,0 +1,134 @@
+@import "./../base/index.less";
+
+.backBg(@name) {
+  .back_images("../../images/icons/@{name}@3x.png", 24px, 24px);
+}
+
+@footBtnHeight:52px;
+
+
+.activity-detail {
+  width: 100%;
+  padding-bottom: @footBtnHeight;
+  float: left;
+
+  .flags {
+    width: 100%;
+    float: left;
+
+    .item {
+      width: 100%;
+      padding: 8px 40px;
+      line-height: 24px;
+      background: @white;
+      float: left;
+      margin-top: 2px;
+
+      &:after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        float: left;
+        margin-right: 8px;
+      }
+
+      &.time:after {
+        .backBg('activity-time');
+      }
+      &.address:after {
+        .backBg('activity-address');
+      }
+      &.price:after {
+        .backBg('activity-price');
+      }
+
+    }
+  }
+
+  .content {
+    width: 100%;
+    float: left;
+    margin-top: 2px;
+  }
+
+  .handle-icons {
+    width: 100%;
+    padding: 12px 20px;
+    float: left;
+    margin-bottom: 6px;
+    background: @white;
+    .icon {
+      margin-right: 18px;
+    }
+  }
+
+  .wonderful {
+    width: 100%;
+    float: left;
+    background: @white;
+    .title {
+      width: 100%;
+      padding-top: 17px;
+      padding-bottom: 4px;
+      font-size: 16px;
+      line-height: 22px;
+      color: @titleColor;
+      text-align: center;
+      float: left;
+      border-bottom: 1px solid @colorF8;
+    }
+
+    .item {
+      width: 100%;
+      height: 110px;
+      padding: 10px 10px 10px 192px;
+      float: left;
+      border-bottom: 1px solid @colorF8;
+      position: relative;
+      .pic {
+        width: 172px;
+        height: 90px;
+        position: absolute;
+        top:10px;
+        left: 10px;
+      }
+      .info {
+        width: 100%;
+        float: left;
+        .desc {
+          width: 100%;
+          float: left;
+          .lineClamp(40px,2);
+          font-size: 14px;
+          margin-top: 5px;
+          margin-bottom: 28px;
+        }
+        .time {
+          width: 100%;
+          float: left;
+        }
+      }
+    }
+  }
+
+  .foot-btn {
+    background: @white;
+    border-top: 1px solid @colorF8;
+    height: @footBtnHeight;
+    padding: 11px 15px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    span {
+      width: 100%;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: @white;
+      display: inline-block;
+      background: linear-gradient(left, #6773B7, #21376F);
+      .border-radius(5px);
+    }
+  }
+}

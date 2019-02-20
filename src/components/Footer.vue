@@ -25,7 +25,7 @@
     },
     watch: {
       $route(to, from) {
-        const arr = ["FindChoice"];
+        const arr = ["FindChoice", "FindActivity"];
         if (arr.indexOf(to.name) > -1) {
           this.show = false;
         } else {

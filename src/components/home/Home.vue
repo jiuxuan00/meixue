@@ -24,7 +24,14 @@
             <!--//End 品质生活-->
             <block-section class="home-section" :title="beautiful.title">
                 <div class="beautiful" slot="banner">
-                    <card-full :data="item" v-for="(item,index) in beautiful.data" :key="index"></card-full>
+                    <card-full :data="item" v-for="(item,index) in beautiful.data" :key="index">
+                        <div slot="icons">
+                            <div class="icons">
+                                <icon className="white like" :count="item.like_count"/>
+                                <icon className="white view" :count="item.view_count"/>
+                            </div>
+                        </div>
+                    </card-full>
                 </div>
             </block-section>
             <!--//End 美在当下-->
@@ -36,6 +43,7 @@
   import vScroll from "../../components/base/Scroll";
   import FocusDefault from "../../components/focus/FocusDefault";
   import BlockSection from "../../components/home/BlockSection";
+  import Icon from "../../components/icons/Icon";
   import CardFull from "../../components/card/Full";
 
   //模拟数据
@@ -69,7 +77,8 @@
       FocusDefault,
       BlockSection,
       CardFull,
-      vScroll
+      vScroll,
+      Icon
     },
     methods: {
       //  品质生活tab
