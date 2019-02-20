@@ -2,22 +2,22 @@
     <div class="choice-detail">
         <div class="header-black">
             <span class="back" @click="onHandleBack"></span>
-            <img class="avatar" :src="detailData.avatar" alt="">
+            <img class="avatar" :src="detail.avatar" alt="">
             <div class="info">
-                <p class="name">{{detailData.username}}</p>
-                <p class="time">{{detailData.time}}</p>
+                <p class="name">{{detail.username}}</p>
+                <p class="time">{{detail.time}}</p>
             </div>
         </div>
         <!--//End-->
 
-        <div class="content" style="background: #eee;" v-html="detailData.content"></div>
+        <div class="content" style="background: #eee;" v-html="detail.content"></div>
         <!--//End -->
 
-        <div class="shop">
-            <img class="pic" :src="detailData.shop.pic" alt="">
+        <div class="shop" v-if="detail.shop">
+            <img class="pic" :src="detail.shop.pic" alt="">
             <div class="info">
-                <p class="name">{{detailData.shop.title}}</p>
-                <p class="serial">编号 {{detailData.shop.serial}}</p>
+                <p class="name">{{detail.shop.title}}</p>
+                <p class="serial">编号 {{detail.shop.serial}}</p>
             </div>
             <div class="link">立即购买</div>
         </div>
@@ -25,36 +25,28 @@
 
         <div class="handles">
             <icon className="gray share"/>
-            <icon className="gray comment" :count="detailData.comment_count"/>
-            <icon className="gray like" :count="detailData.like_count"/>
+            <icon className="gray comment" :count="detail.comment_count"/>
+            <icon className="gray like" :count="detail.like_count"/>
         </div>
         <!--//End -->
 
-
+        <comment :data="detail.comment"></comment>
     </div>
 </template>
 
 <script>
   import Icon from "../../components/icons/Icon";
-  import Comment from "../../components/base/Comment";
+  import Comment from "../../components/card/Comment";
+
+  //数据
+  import detailsData from "../../../static/data/find/details";
+
 
   export default {
     name: "ChoiceDetail",
     data() {
       return {
-        detailData: {
-          avatar: "/static/images/default/avatar-pink@3x.png",
-          username: "",
-          time: "Type发表时间",
-          comment_count: 1222,
-          like_count: 2222,
-          shop: {
-            pic: "/static/images/default/default-thumb.png",
-            title: "空气层美棉提花四件套空气层美棉提花四件套空气层美棉提花四件套空气层美棉提花四件套",
-            serial: "2213"
-          },
-          content: "我是富文本颜色是为了区别下，有数据可以把样式去掉我是富文本颜色是为了区别下，有数据可以把样式去掉我是富文本颜色是为了区别下，有数据可以把样式去掉"
-        }
+        detail: detailsData["type1"]
       };
     },
     components: {
@@ -63,7 +55,7 @@
     },
     mounted() {
       //获取用户名
-      this.detailData.username = this.$route.query.username;
+      this.detail.username = this.$route.query.username;
     },
     methods: {
       //返回上一页

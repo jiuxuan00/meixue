@@ -1,5 +1,48 @@
 @import "./../base/index.less";
 
-.comment {
+.card-comment {
+  width: 100%;
+  padding: 10px 12px;
+  float: left;
+  border-top: 2px solid @colorF8;
 
+  .title {
+    width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    color: @titleColor;
+    float: left;
+  }
+
+  .list {
+    width: 100%;
+    float: left;
+
+    .item {
+      position: relative;
+      width: 100%;
+      padding-left: 28px;
+      font-size: 12px;
+      line-height: 17px;
+      color: @grayColor;
+      float: left;
+      margin-top: 10px;
+    }
+
+    .avatar {
+      width: 18px;
+      height: 18px;
+      .border-radius;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .desc {
+      color: @colorBlack;
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+
+  }
 }

@@ -3,7 +3,8 @@ import Router from "vue-router";
 
 Vue.use(Router);
 
-export default new Router({
+
+let router = new Router({
   routes: [
     { path: "/", redirect: "/index" },
     //美学
@@ -23,3 +24,9 @@ export default new Router({
     { path: "/register", name: "Register", component: () => import("@/pages/form/Register.vue") }
   ]
 });
+
+// router.beforeEach((to, from, next) => {
+//   console.log(to)
+// })
+
+export default router;
