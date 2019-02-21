@@ -29,16 +29,17 @@
         <div class="wonderful">
             <div class="title">更多精彩活动</div>
             <ul>
-                <li class="item" v-for="(item,index) in detail.wonderful">
+                <router-link tag="li" :to="{path:'/find/activity/'+item.id}" class="item"
+                             v-for="(item,index) in detail.wonderful" :key="index">
                     <img class="pic" :src="item.picUrl" alt="">
                     <div class="info">
                         <p class="desc">{{item.desc}}</p>
                         <p class="time">{{item.time}}</p>
                     </div>
-                </li>
+                </router-link>
             </ul>
         </div>
-        <!--//End-->
+        <!--//End 更多精彩活动-->
 
         <div class="foot-btn">
             <span>我要报名</span>
@@ -56,8 +57,8 @@
     name: "FindActivityDetail",
     data() {
       return {
-        detail:{
-          content:'我是富文本我是富文本我是富文本我是富文本我是富文本',
+        detail: {
+          content: "我是富文本我是富文本我是富文本我是富文本我是富文本",
           banner: [
             {
               picUrl: "/static/pics/home/beautiful.jpg",
@@ -67,24 +68,27 @@
               view_count: 2222
             }
           ],
-          wonderful:[
+          wonderful: [
             {
-              picUrl:'/static/images/default/default-thumb.png',
-              desc:'的卡萨红框的哈哈的卡号刷的卡还是看电话卡还贷款和卡号是的卡号的',
-              time:'2019年01月20日'
+              id:1,
+              picUrl: "/static/images/default/default-thumb.png",
+              desc: "的卡萨红框的哈哈的卡号刷的卡还是看电话卡还贷款和卡号是的卡号的",
+              time: "2019年01月20日"
             },
             {
-              picUrl:'/static/images/default/default-thumb.png',
-              desc:'的卡萨红框的哈哈的卡号刷的卡还是看电话卡还贷款和卡号是的卡号的',
-              time:'2019年01月20日'
+              id:2,
+              picUrl: "/static/images/default/default-thumb.png",
+              desc: "的卡萨红框的哈哈的卡号刷的卡还是看电话卡还贷款和卡号是的卡号的",
+              time: "2019年01月20日"
             },
             {
-              picUrl:'/static/images/default/default-thumb.png',
-              desc:'的卡萨红框的哈哈的卡号刷的卡还是看电话卡还贷款和卡号是的卡号的',
-              time:'2019年01月20日'
+              id:3,
+              picUrl: "/static/images/default/default-thumb.png",
+              desc: "的卡萨红框的哈哈的卡号刷的卡还是看电话卡还贷款和卡号是的卡号的",
+              time: "2019年01月20日"
             }
           ]
-        },
+        }
 
       };
     },
@@ -96,5 +100,5 @@
 </script>
 
 <style lang="less">
-@import "../../assets/less/details/activity.less";
+    @import "../../assets/less/details/activity.less";
 </style>
