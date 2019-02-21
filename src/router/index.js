@@ -19,7 +19,15 @@ let router = new Router({
       path: "/good",
       component: () => import("@/pages/good/Index.vue"),
       children: [
-        { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List.vue") }
+        { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List.vue") },
+        {
+          path: "/good/detail/:id",
+          name: "GoodDetail",
+          meta: {
+            search: "hide"
+          },
+          component: () => import("@/pages/details/ChoiceDetail.vue")
+        }
       ]
     },
     //我的

@@ -1,13 +1,12 @@
 <template>
     <div class="choice-detail">
-        <div class="header-black">
-            <span class="back" @click="onHandleBack"></span>
+        <good-header :isSearch="false">
             <img class="avatar" :src="detail.avatar" alt="">
             <div class="info">
                 <p class="name">{{detail.username}}</p>
                 <p class="time">{{detail.time}}</p>
             </div>
-        </div>
+        </good-header>
         <!--//End-->
 
         <div class="content" style="background: #eee;" v-html="detail.content"></div>
@@ -35,6 +34,7 @@
 </template>
 
 <script>
+  import GoodHeader from "../../components/header/GoodHeader";
   import Icon from "../../components/icons/Icon";
   import Comment from "../../components/card/Comment";
 
@@ -51,17 +51,11 @@
     },
     components: {
       Icon,
-      Comment
+      Comment,
+      GoodHeader
     },
-    mounted() {
-      //获取用户名
-      this.detail.username = this.$route.query.username;
-    },
+    mounted() {},
     methods: {
-      //返回上一页
-      onHandleBack() {
-        this.$router.go(-1);
-      },
       /**
        * 事件分享、评论、喜欢
        * @param data 当前数据

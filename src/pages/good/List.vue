@@ -1,5 +1,8 @@
 <template>
     <div class="good">
+        <good-header></good-header>
+        <!--//End-->
+
         <div class="sidebar">
             <div class="item" v-for="(item,index) in tabs" :key="index"
                  @click="onSelectedTab(item.id)"
@@ -27,16 +30,16 @@
                     <div class="title">新上单品</div>
                     <card-recommend :data="item" v-for="(item,index) in products" :key="index"></card-recommend>
                 </div>
-
+                <!--//End-->
             </v-scroll>
         </div>
         <!--//End sidebar-->
-
 
     </div>
 </template>
 
 <script>
+  import GoodHeader from "../../components/header/GoodHeader";
   import vScroll from "../../components/base/Scroll";
   import FocusDefault from "../../components/focus/FocusDefault";
   import CardRecommend from "../../components/card/CardRecommend";
@@ -114,7 +117,8 @@
     components: {
       vScroll,
       FocusDefault,
-      CardRecommend
+      CardRecommend,
+      GoodHeader
     },
     watch: {
       $route(to, from) {

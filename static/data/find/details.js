@@ -1,7 +1,7 @@
 export default {
   type1: {
     avatar: "/static/images/default/avatar-pink@3x.png",
-    username: "",
+    username: "dhdhdhdhk",
     time: "Type发表时间",
     comment_count: 1222,
     like_count: 2222,
