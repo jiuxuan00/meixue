@@ -125,12 +125,18 @@
         this._getIdByUrl();
       }
     },
-    mounted() {
+    beforeMount() {
       this._getIdByUrl();
     },
+    mounted() {},
     methods: {
       _getIdByUrl() {
-        this.currentTabId = this.$route.query.id;
+        if (!this.$route.query.id) {
+          this.currentTabId = 1;
+          console.log(11);
+        }else {
+          this.currentTabId = this.$route.query.id;
+        }
       },
       onSelectedTab(id) {
         this.$router.push({ path: "/good/list", query: { id: id } });
