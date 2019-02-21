@@ -1,0 +1,150 @@
+@import "./../base/index.less";
+
+
+.good {
+  background: @white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  .sidebar {
+    width: 73px;
+    padding: 15px 0;
+    position: fixed;
+    top: 49px;
+    right: 0;
+    left: 0;
+    bottom: 52px;
+    border-right: 1px solid rgba(0, 0, 0, .13);
+    background: @white;
+    overflow: auto;
+
+    .item {
+      width: 100%;
+      line-height: 26px;
+      font-size: 14px;
+      text-align: center;
+      float: left;
+      margin-bottom: 23px;
+      position: relative;
+
+      &.active:after {
+        content: '';
+        width: 3px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: @titleColor;
+      }
+    }
+  }
+
+  .container {
+    position: fixed;
+    top: 49px;
+    left: 79px;
+    right: 6px;
+    bottom: 53px;
+    background: @white;
+
+    .title {
+      width: 100%;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: @titleColor;
+      float: left;
+      margin: 10px 0;
+    }
+
+    .focus {
+      margin-left: 8px;
+
+      &.cube-slide {
+        width: 274px;
+        height: 150px;
+
+        .cube-slide-group {
+          height: 135px;
+        }
+
+        .cube-slide-dots {
+          bottom: 0;
+
+          span.active {
+            background: @colorBlack;
+          }
+        }
+      }
+    }
+
+    .recommend {
+      .items {
+        width: 100%;
+        padding: 0 16px;
+        float: left;
+
+        .item {
+          width: 33.3%;;
+          height: 70px;
+          float: left;
+          margin-bottom: 30px;
+
+          .pic {
+            width: 48px;
+            height: 48px;
+          }
+
+          .txt {
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 6px;
+          }
+
+          &:nth-child(n) {
+            text-align: left;
+          }
+
+          &:nth-child(3n) {
+            text-align: right;
+          }
+
+          &:nth-child(3n-1) {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .products {
+      .card-list {
+        width: 140px;
+        height: 212px;
+        margin-bottom: 6px;
+
+        .pic {
+          height: 140px;
+        }
+
+        .flag {
+          top: 120px;
+
+          .flag-opacity {
+            background: @white;
+            color: @colorF6;
+            border-color: @colorF6;
+          }
+        }
+
+        &:nth-child(odd) {
+          float: right;
+        }
+      }
+    }
+  }
+}

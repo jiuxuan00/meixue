@@ -1,15 +1,27 @@
 <template>
-    <div>
-        <h1>好物</h1>
+    <div class="good-index">
+        <good-header></good-header>
+        <!--//End-->
+        <keep-alive>
+            <router-view/>
+        </keep-alive>
     </div>
 </template>
 
 <script>
+  import GoodHeader from "../../components/header/GoodHeader";
+
   export default {
-    name: "Index"
+    name: "GoodIndex",
+    data() {
+      return {};
+    },
+    components: {
+      GoodHeader
+    }
   };
 </script>
 
-<style scoped>
-
+<style lang="less">
+    @import "../../assets/less/good/good.less";
 </style>

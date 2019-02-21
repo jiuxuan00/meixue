@@ -1,5 +1,5 @@
 <template>
-    <div class="card-recommend" :class="data.type">
+    <div class="card-list" :class="data.type">
         <img class="pic" :src="data.picUrl" alt="">
         <!--资讯类-->
         <div class="main" v-if="data.type==='news'">

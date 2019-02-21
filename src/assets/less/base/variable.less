@@ -5,12 +5,13 @@
 }
 
 //设置显示几行，末尾使用...
-.lineOne(@height){
+.lineOne(@height) {
   height: @height;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .lineClamp(@height; @num) {
   height: @height;
   line-height: @height/2;
@@ -27,7 +28,7 @@
 }
 
 //定位
-.pos(@p, @t, @r, @b, @l, @w, @h, @color, @z-i){
+.pos(@p, @t, @r, @b, @l, @w, @h, @color, @z-i) {
   position: @p;
   top: @t;
   right: @r;
@@ -53,3 +54,9 @@
   z-index: 3;
 }
 
+//图标
+.icon24(@name) {
+  width: 24px;
+  height: 24px;
+  .back_images(@name, 24px, 24px);
+}

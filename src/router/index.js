@@ -15,7 +15,13 @@ let router = new Router({
     { path: "/find/choice/:id", name: "FindChoice", component: () => import("@/pages/details/ChoiceDetail.vue") },
     { path: "/find/activity/:id", name: "FindActivity", component: () => import("@/pages/details/ActivityDetail.vue") },
     //好物
-    { path: "/good", name: "Good", component: () => import("@/pages/good/Index.vue") },
+    {
+      path: "/good",
+      component: () => import("@/pages/good/Index.vue"),
+      children: [
+        { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List.vue") }
+      ]
+    },
     //我的
     { path: "/my", name: "My", component: () => import("@/pages/my/Index.vue") },
     // 登录
@@ -24,9 +30,5 @@ let router = new Router({
     { path: "/register", name: "Register", component: () => import("@/pages/form/Register.vue") }
   ]
 });
-
-// router.beforeEach((to, from, next) => {
-//   console.log(to)
-// })
 
 export default router;

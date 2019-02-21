@@ -4,7 +4,6 @@
                      :options="options"
                      @pulling-down="onPullingDown"
                      @pulling-up="onPullingUp">
-            <!--<card-choice :data="item" v-for="(item, index) in recommend" :key="index"></card-choice>-->
             <card-recommend :data="item" v-for="(item,index) in recommend" :key="index"></card-recommend>
         </cube-scroll>
     </div>
