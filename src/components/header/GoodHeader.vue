@@ -62,14 +62,19 @@
     components: {
       BaseHeader
     },
+    watch: {
+      $route(to, from) {
+        this.isSuggest = false;
+      }
+    },
     methods: {
       //获取焦点
       onHanldeFocus() {
-        this.isSuggest = !this.isSuggest;
+        this.isSuggest = true;
       },
       //失去焦点
       onHanldeBlur() {
-        this.isSuggest = !this.isSuggest;
+        this.isSuggest = false;
       },
       //跳转链接
       onRedirect(id) {

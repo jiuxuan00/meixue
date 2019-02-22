@@ -3,12 +3,12 @@
                  :options="options"
                  @pulling-down="onPullingDown"
                  @pulling-up="onPullingUp">
-        <card-choice :data="item" v-for="(item, index) in matchList" :key="index"></card-choice>
+        <card-news :data="item" v-for="(item, index) in matchList" :key="index"></card-news>
     </cube-scroll>
 </template>
 
 <script>
-  import CardChoice from "../card/Choice";
+  import CardNews from "../card/CardNews";
 
   const DOWN = "down";
   const UP = "up";
@@ -45,7 +45,7 @@
       }
     },
     components: {
-      CardChoice
+      CardNews
     },
     created() {
     },

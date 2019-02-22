@@ -1,5 +1,5 @@
 <template>
-    <div class="card-average">
+    <div class="card-news">
         <div class="head"><img :src="data.avatar" alt=""><span>{{data.username}}</span></div>
         <div class="item">
             <router-link tag="a" :to="{path:data.href, query:{username:data.username, footer:false}}"><img :src="data.pic" alt=""></router-link>
@@ -55,5 +55,5 @@
 </script>
 
 <style lang="less">
-    @import '../../assets/less/card/card_average.less';
+    @import '../../assets/less/card/card_news.less';
 </style>

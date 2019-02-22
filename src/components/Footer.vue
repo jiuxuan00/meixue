@@ -17,7 +17,7 @@
         tabs: [
           { label: "美学", href: "/index", className: "home" },
           { label: "发现", href: "/find", className: "find" },
-          { label: "好物", href: "/good/list", className: "good" },
+          { label: "好物", href: "/good", className: "good" },
           { label: "我的", href: "/my", className: "my" }
         ],
         show: true

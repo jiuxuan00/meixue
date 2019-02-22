@@ -6,30 +6,37 @@ Vue.use(Router);
 
 let router = new Router({
   routes: [
-    { path: "/", redirect: "/index" },
+    {
+      path: "/", redirect: "/index"
+    },
     //美学
-    { path: "/index", name: "Index", component: () => import("@/pages/home/Index.vue") },
+    {
+      path: "/index", name: "Index", component: () => import("@/pages/home/Index")
+    },
     //发现
-    { path: "/find", name: "Find", component: () => import("@/pages/find/Index.vue") },
-    //发现 活动详情
-    { path: "/find/choice/:id", name: "FindChoice", component: () => import("@/pages/details/ChoiceDetail.vue") },
-    { path: "/find/activity/:id", name: "FindActivity", component: () => import("@/pages/details/ActivityDetail.vue") },
+    {
+      path: "/find", name: "Find", component: () => import("@/pages/find/Index")
+    },
     //好物
     {
       path: "/good",
-      component: () => import("@/pages/good/Index.vue"),
+      name: "GoodIndex",
+      component: () => import("@/pages/good/Index")
+    },
+
+    //详情
+    {
+      path: "/details",
+      name: "Details",
+      redirect: "/",
+      component: () => import("@/pages/details/Router"),
       children: [
-        { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List.vue") },
-        {
-          path: "/good/detail/:id",
-          name: "GoodDetail",
-          meta: {
-            search: "hide"
-          },
-          component: () => import("@/pages/details/ChoiceDetail.vue")
-        }
+        //资讯类详情
+        { path: "/details/news/:id", component: () => import("@/pages/details/NewsDetail") },
+        { path: "/details/activity/:id", component: () => import("@/pages/details/ActivityDetail") }
       ]
     },
+
     //我的
     { path: "/my", name: "My", component: () => import("@/pages/my/Index.vue") },
     // 登录
