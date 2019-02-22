@@ -11,7 +11,7 @@ let router = new Router({
     },
     //美学
     {
-      path: "/index", name: "Index", component: () => import("@/pages/home/Index")
+      path: "/index", name: "Index", component: () => import("@/pages/index/Index.vue")
     },
     //发现
     {
@@ -23,26 +23,27 @@ let router = new Router({
       name: "GoodIndex",
       component: () => import("@/pages/good/Index")
     },
-
+    { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List") },
     //详情
     {
       path: "/details",
       name: "Details",
       redirect: "/",
-      component: () => import("@/pages/details/Router"),
+      component: () => import("@/pages/details/Index"),
       children: [
         //资讯类详情
         { path: "/details/news/:id", component: () => import("@/pages/details/NewsDetail") },
-        { path: "/details/activity/:id", component: () => import("@/pages/details/ActivityDetail") }
+        { path: "/details/activity/:id", component: () => import("@/pages/details/ActivityDetail") },
+        { path: "/details/shop/:id", component: () => import("@/pages/details/ShopDetail") }
       ]
     },
 
     //我的
-    { path: "/my", name: "My", component: () => import("@/pages/my/Index.vue") },
+    { path: "/my", name: "My", component: () => import("@/pages/my/Index") },
     // 登录
-    { path: "/login", name: "Login", component: () => import("@/pages/form/Login.vue") },
+    { path: "/login", name: "Login", component: () => import("@/pages/form/Login") },
     // 注册
-    { path: "/register", name: "Register", component: () => import("@/pages/form/Register.vue") }
+    { path: "/register", name: "Register", component: () => import("@/pages/form/Register") }
   ]
 });
 

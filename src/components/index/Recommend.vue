@@ -70,5 +70,5 @@
 
 
 <style lang="less">
-    @import "../../assets/less/home/recommend.less";
+    @import "../../assets/less/index/recommend.less";
 </style>

@@ -10,8 +10,8 @@
 <script>
   import vScroll from "../../components/base/Scroll";
   import HeaderHome from "../../components/header/HomeHeader";
-  import PageHome from "../../components/home/Home";
-  import PageRecommend from "../../components/home/Recommend";
+  import PageHome from "../../components/index/Home";
+  import PageRecommend from "../../components/index/Recommend";
 
   export default {
     name: "Index",
@@ -37,5 +37,5 @@
 </script>
 
 <style lang="less">
-    @import "../../assets/less/home/home.less";
+    @import "../../assets/less/pages/index.less";
 </style>

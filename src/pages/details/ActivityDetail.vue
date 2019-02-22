@@ -29,7 +29,7 @@
         <div class="wonderful">
             <div class="title">更多精彩活动</div>
             <ul>
-                <router-link tag="li" :to="{path:'/find/activity/'+item.id}" class="item"
+                <router-link tag="li" :to="{path:'/details/activity/'+item.id}" class="item"
                              v-for="(item,index) in detail.wonderful" :key="index">
                     <img class="pic" :src="item.picUrl" alt="">
                     <div class="info">
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-  import Icon from "./../../components/icons/Icon";
+  import Icon from "../../components/base/icons/Icon";
   import CardFull from "../../components/card/Full";
 
   export default {
@@ -61,7 +61,7 @@
           content: "我是富文本我是富文本我是富文本我是富文本我是富文本",
           banner: [
             {
-              picUrl: "/static/pics/home/beautiful.jpg",
+              picUrl: "/static/pics/index/beautiful.jpg",
               title: "我是标题文字啊啊啊啊啊",
               subTitle: "我是副标题文字啊大大多所",
               collection_count: 111,

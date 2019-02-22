@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import Icon from "./../icons/Icon";
+  import Icon from "../base/icons/Icon";
 
   export default {
     name: "block-section",
@@ -51,5 +51,5 @@
 </script>
 
 <style lang="less">
-    @import "./../../assets/less/home/section.less";
+    @import "../../assets/less/index/section.less";
 </style>

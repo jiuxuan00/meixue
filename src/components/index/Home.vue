@@ -6,7 +6,7 @@
             <block-section class="home-section" :title="upgrade.title" :list="upgrade.data">
                 <div slot="banner" class="single">
                     <span class="txt">软装升级固定语段，此处编辑</span>
-                    <img class="pic" src="../../../static/images/home/upgrade-banner@3x.png" alt="">
+                    <img class="pic" src="../../../static/images/index/upgrade-banner@3x.png" alt="">
                 </div>
             </block-section>
             <!--//End 软件升级-->
@@ -42,8 +42,8 @@
 <script>
   import vScroll from "../../components/base/Scroll";
   import FocusDefault from "../../components/focus/FocusDefault";
-  import BlockSection from "../../components/home/BlockSection";
-  import Icon from "../../components/icons/Icon";
+  import BlockSection from ".//BlockSection";
+  import Icon from "../base/icons/Icon";
   import CardFull from "../../components/card/Full";
 
   //模拟数据
@@ -62,8 +62,8 @@
           title: { text: "- 品质生活 -", className: "life" },
           currentIndex: 0,
           tabs: [
-            { zh: "乐享起居", en: "Enioy living", picUrl: "../../../static/images/home/life-left.png" },
-            { zh: "美学精选", en: "High qualite life", picUrl: "../../../static/images/home/life-right.png" }
+            { zh: "乐享起居", en: "Enioy living", picUrl: "../../../static/images/index/life-left.png" },
+            { zh: "美学精选", en: "High qualite life", picUrl: "../../../static/images/index/life-right.png" }
           ],
           data: dataList[1][0]
         },
@@ -92,5 +92,5 @@
 </script>
 
 <style lang="less">
-    @import "../../assets/less/home/home.less";
+    @import "../../assets/less/index/home.less";
 </style>

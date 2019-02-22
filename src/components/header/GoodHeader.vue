@@ -1,19 +1,22 @@
 <template>
     <div class="good-header">
         <base-header>
-            <div class="search" v-if="isSearch">
+            <div class="search" v-if="data.search">
                 <input class="ipt" @focus="onHanldeFocus" type="text" value="" placeholder="搜索">
                 <div class="suggest" v-show="isSuggest">
                     <dl class="list" v-for="(item,index) in suggest" :key="index">
                         <dt>{{item.label}}</dt>
                         <dd>
-                            <a class="link" v-for="(link,key) in item.data" :key="key" @click="onRedirect(link.id)">{{link.label}}</a>
+                            <a class="link" v-for="(link,key) in item.data" :key="key" @click="onRedirect(link.href)">{{link.label}}</a>
                         </dd>
                     </dl>
                 </div>
                 <div class="mask" @click="onHanldeBlur" v-show="isSuggest"></div>
             </div>
-            <div class="message"><span class="count">12</span></div>
+            <div class="message" v-if="data.message">
+                <span class="count">{{data.messageCount ?data.messageCount:0}}</span>
+            </div>
+            <div class="title" v-if="data.title">{{data.title}}</div>
             <slot></slot>
         </base-header>
     </div>
@@ -25,10 +28,14 @@
   export default {
     name: "GoodHeader",
     props: {
-      isSearch: {
-        type: Boolean,
+      data: {
+        type: Object,
         default() {
-          return true;
+          return {
+            search: true, //搜索框
+            message: true, //消息图标
+            title: ""
+          };
         }
       }
     },
@@ -39,21 +46,17 @@
           {
             label: "热门搜索",
             data: [
-              { id: 1, label: "产品名称1" },
-              { id: 2, label: "产品名称2" },
-              { id: 3, label: "产品名称3" },
-              { id: 4, label: "产品名称4" },
-              { id: 5, label: "产品名称5" }
+              { id: 1, label: "购买详情", href:'/details/shop/1' },
+              { id: 2, label: "新闻详情", href:'/details/news/1' },
+              { id: 3, label: "活动详情", href:'/details/activity/1' },
             ]
           },
           {
             label: "历史搜索",
             data: [
-              { id: 1, label: "产品名称1" },
-              { id: 2, label: "产品名称2" },
-              { id: 3, label: "产品名称3" },
-              { id: 4, label: "产品名称4" },
-              { id: 5, label: "产品名称5" }
+              { id: 1, label: "购买详情", href:'/details/shop/1' },
+              { id: 2, label: "新闻详情", href:'/details/news/1' },
+              { id: 3, label: "活动详情", href:'/details/activity/1' },
             ]
           }
         ]
@@ -77,8 +80,8 @@
         this.isSuggest = false;
       },
       //跳转链接
-      onRedirect(id) {
-        this.$router.push({ path: `/good/detail/${id}` });
+      onRedirect(url) {
+        this.$router.push({ path: url });
       }
     }
   };

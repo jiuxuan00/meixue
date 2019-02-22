@@ -1,6 +1,6 @@
 <template>
     <div class="choice-detail">
-        <good-header :isSearch="false">
+        <good-header :data="header">
             <img class="avatar" :src="detail.avatar" alt="">
             <div class="info">
                 <p class="name">{{detail.username}}</p>
@@ -18,7 +18,7 @@
                 <p class="name">{{detail.shop.title}}</p>
                 <p class="serial">编号 {{detail.shop.serial}}</p>
             </div>
-            <div class="link">立即购买</div>
+            <router-link tag="div" :to="{path:detail.shop.href}" class="link">立即购买</router-link>
         </div>
         <!--//End -->
 
@@ -35,7 +35,7 @@
 
 <script>
   import GoodHeader from "../../components/header/GoodHeader";
-  import Icon from "../../components/icons/Icon";
+  import Icon from "../../components/base/icons/Icon";
   import Comment from "../../components/card/Comment";
 
   //数据
@@ -46,6 +46,9 @@
     name: "ChoiceDetail",
     data() {
       return {
+        header: {
+          search: false
+        },
         detail: detailsData["type1"]
       };
     },
@@ -54,7 +57,8 @@
       Comment,
       GoodHeader
     },
-    mounted() {},
+    mounted() {
+    },
     methods: {
       /**
        * 事件分享、评论、喜欢

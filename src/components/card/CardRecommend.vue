@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  import Icon from "./../../components/icons/Icon";
+  import Icon from "../base/icons/Icon";
 
   export default {
     name: "recommend",
@@ -52,5 +52,5 @@
 </script>
 
 <style lang="less">
-    @import "../../assets/less/home/recommend.less";
+    @import "../../assets/less/index/recommend.less";
 </style>

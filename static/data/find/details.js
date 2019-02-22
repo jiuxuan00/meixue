@@ -6,9 +6,11 @@ export default {
     comment_count: 1222,
     like_count: 2222,
     shop: {
+      id: 1,
       pic: "/static/images/default/default-thumb.png",
       title: "空气层美棉提花四件套空气层美棉提花四件套空气层美棉提花四件套空气层美棉提花四件套",
-      serial: "2213"
+      serial: "2213",
+      href: "/details/shop/1"
     },
     content: "我是富文本颜色是为了区别下，有数据可以把样式去掉我是富文本颜色是为了区别下，有数据可以把样式去掉我是富文本颜色是为了区别下，有数据可以把样式去掉",
     comment: [

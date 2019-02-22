@@ -1,6 +1,6 @@
 <template>
     <div class="good">
-        <good-header></good-header>
+        <good-header :is-msg="true"></good-header>
         <!--//End-->
 
         <div class="sidebar">
@@ -18,10 +18,10 @@
                 <div class="recommend">
                     <div class="title">推荐专区</div>
                     <ul class="items">
-                        <li class="item" v-for="(item,index) in recommend" :key="index">
+                        <router-link tag="li" :to="{path:'/good/list', query:{id:item.id}}" class="item" v-for="(item,index) in recommend" :key="index">
                             <img class="pic" :src="item.picUrl" alt="">
                             <p class="txt">{{item.title}}</p>
-                        </li>
+                        </router-link>
                     </ul>
                 </div>
                 <!--//End-->
@@ -40,9 +40,11 @@
 
 <script>
   import GoodHeader from "../../components/header/GoodHeader";
+
   import vScroll from "../../components/base/Scroll";
   import FocusDefault from "../../components/focus/FocusDefault";
   import CardRecommend from "../../components/card/CardRecommend";
+  import Router from "../details/Index";
 
   export default {
     name: "GoodIndex",
@@ -68,19 +70,19 @@
         ],
         //轮播图
         focus: [
-          { picUrl: "/static/pics/home/focus1.jpg", href: "" },
-          { picUrl: "/static/pics/home/focus1.jpg", href: "" },
-          { picUrl: "/static/pics/home/focus1.jpg", href: "" },
-          { picUrl: "/static/pics/home/focus1.jpg", href: "" }
+          { picUrl: "/static/pics/index/focus1.jpg", href: "" },
+          { picUrl: "/static/pics/index/focus1.jpg", href: "" },
+          { picUrl: "/static/pics/index/focus1.jpg", href: "" },
+          { picUrl: "/static/pics/index/focus1.jpg", href: "" }
         ],
         //推荐专区
         recommend: [
-          { picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装1" },
-          { picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装2" },
-          { picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装3" },
-          { picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装4" },
-          { picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装5" },
-          { picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装6" }
+          {id:'1', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装1" },
+          {id:'2', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装2" },
+          {id:'3', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装3" },
+          {id:'4', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装4" },
+          {id:'5', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装5" },
+          {id:'6', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装6" }
         ],
         //新上单品
         products: [
@@ -90,31 +92,35 @@
             desc: "我是描述文字111",
             picUrl: "/static/pics/good/products1.jpg",
             type: "product",
-            href: ""
+            href: "/details/shop/1"
           },
           {
             id: 2,
             title: "我是标题11111111",
             desc: "我是描述文字111",
             picUrl: "/static/pics/good/products1.jpg",
-            type: "product"
+            type: "product",
+            href: "/details/shop/2"
           },
           {
             title: "我是标题11111111",
             desc: "我是描述文字111",
             picUrl: "/static/pics/good/products1.jpg",
-            type: "product"
+            type: "product",
+            href: "/details/shop/2"
           },
           {
             title: "我是标题11111111",
             desc: "我是描述文字111",
             picUrl: "/static/pics/good/products1.jpg",
-            type: "product"
+            type: "product",
+            href: "/details/shop/3"
           }
         ]
       };
     },
     components: {
+      Router,
       vScroll,
       FocusDefault,
       CardRecommend,

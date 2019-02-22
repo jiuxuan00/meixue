@@ -12,5 +12,5 @@
 </script>
 
 <style lang="less">
-    @import './../../assets/less/common/icon.less';
+    @import '../../../assets/less/common/icon.less';
 </style>

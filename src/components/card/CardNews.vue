@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import Icon from "./../icons/Icon";
+  import Icon from "../base/icons/Icon";
 
   export default {
     props: {
