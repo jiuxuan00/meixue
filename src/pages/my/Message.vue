@@ -1,6 +1,6 @@
 <template>
     <div class="my-message">
-        <good-header :data="header"></good-header>
+        <base-header :data="header"></base-header>
         <!--//End-->
         <div class="main">
             <div class="list" id="list">
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import GoodHeader from "../../components/header/GoodHeader";
+  import BaseHeader from "../../components/header/BaseHeader";
 
   export default {
     name: "Message",
@@ -86,7 +86,7 @@
       };
     },
     components: {
-      GoodHeader
+      BaseHeader
     },
     methods: {
       filesAdded(files) {

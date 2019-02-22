@@ -1,6 +1,6 @@
 <template>
     <div class="good">
-        <good-header :data="header"></good-header>
+        <base-header :data="header"></base-header>
         <!--//End-->
 
         <div class="sidebar">
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-  import GoodHeader from "../../components/header/GoodHeader";
+  import BaseHeader from "../../components/header/BaseHeader";
 
   import vScroll from "../../components/base/Scroll";
   import FocusDefault from "../../components/focus/FocusDefault";
@@ -146,7 +146,7 @@
       vScroll,
       FocusDefault,
       CardRecommend,
-      GoodHeader
+      BaseHeader
     },
     watch: {
       $route(to, from) {

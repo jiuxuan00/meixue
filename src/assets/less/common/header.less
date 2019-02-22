@@ -1,5 +1,4 @@
-@import "../base/index.less";
-
+@import "./../base/index.less";
 
 @deaultHeight: 44px;
 
@@ -28,6 +27,136 @@
       top: 50%;
       left: 12px;
       margin-top: -12px;
+    }
+  }
+
+  .search {
+    width: 268px;
+    line-height: 30px;
+    float: left;
+    margin: 7px 0;
+    position: relative;
+
+    .ipt {
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      padding: 5px 12px 5px 33px;
+      .border-radius(4px);
+      float: left;
+    }
+
+    .suggest {
+      width: 100%;
+      position: absolute;
+      top: 27px;
+      left: 0;
+      background: @white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+      z-index: 2;
+
+      .list {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 17px;
+        float: left;
+
+        dt, dd {
+          width: 100%;
+          float: left;
+        }
+
+        dt {
+          margin: 6px 0;
+        }
+
+        dd {
+          .link {
+            padding: 2px 20px;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 6px;
+            border: 1px solid @colorF2;
+            .border-radius(30px);
+          }
+        }
+
+        &:first-child {
+          border-bottom: 2px solid @color97;
+        }
+      }
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: @grayColor;
+        position: absolute;
+        top: 8px;
+        left: 0;
+      }
+    }
+
+    &:before {
+      content: '';
+      .icon24("../../images/icons/good-search@3x.png");
+      position: absolute;
+      top: 50%;
+      left: 6px;
+      margin-top: -12px;
+      z-index: 2;
+    }
+
+    .mask {
+      content: '';
+      position: fixed;
+      top:44px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: transparent;
+      z-index: 1;
+    }
+  }
+
+  .title {
+    width: 100%;
+    line-height: 44px;
+    font-size: 20px;
+    color: @white;
+    text-align: center;
+  }
+
+  .message {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    margin-top: -12px;
+
+    .count {
+      font-size: 10px;
+      height: 8px;
+      line-height: 8px;
+      padding: 2px 3px;
+      position: absolute;
+      top: 0;
+      left: 14px;
+      background: @white;
+      color: @color0AF;
+      .border-radius(20px)
+    }
+
+    &:before {
+      content: '';
+      .icon24("../../images/icons/good-message@3x.png");
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -12px;
+      margin-left: -12px;
     }
   }
 }

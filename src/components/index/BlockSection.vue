@@ -19,7 +19,8 @@
                         </div>
                     </li>
                 </ul>
-                <div class="more"><span class="text">更多</span></div>
+                <router-link tag="div" :to="{path:more}" class="more"><span class="text">更多</span>
+                </router-link>
             </cube-scroll>
         </div>
     </div>
@@ -42,10 +43,19 @@
         default() {
           return [];
         }
+      },
+      more: {
+        type: String,
+        default() {
+          return "/recommend/list";
+        }
       }
     },
     components: {
       Icon
+    },
+    beforeMount() {
+      console.log("->", this.list);
     }
   };
 </script>

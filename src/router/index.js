@@ -7,15 +7,23 @@ Vue.use(Router);
 let router = new Router({
   routes: [
     {
-      path: "/", redirect: "/index"
+      path: "/",
+      redirect: "/index"
     },
-    //美学
     {
-      path: "/index", name: "Index", component: () => import("@/pages/index/Index.vue")
+      path: "/index",
+      name: "Index",
+      component: () => import("@/pages/index/Index.vue")
     },
-    //发现
-    {
-      path: "/find", name: "Find", component: () => import("@/pages/find/Index")
+    {//推荐
+      path: "/recommend/list",
+      name: "RecommendList",
+      component: () => import("@/pages/recommend/List.vue")
+    },
+    {//发现
+      path: "/find",
+      name: "Find",
+      component: () => import("@/pages/find/Index")
     },
     //好物
     {

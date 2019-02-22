@@ -1,6 +1,35 @@
 @import "./../base/index.less";
 
-.good-header {
+@deaultHeight: 44px;
+
+.header {
+  width: 100%;
+  height: @deaultHeight;
+  padding: 0 @deaultHeight;
+  background: @colorBlack;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 2;
+
+  .back {
+    width: @deaultHeight;
+    height: @deaultHeight;
+    position: absolute;
+    top:0;
+    left: 0;
+    &:after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      .back_images("../../images/icons/back-arrow-left-white.png", 24px, 24px);
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      margin-top: -12px;
+    }
+  }
+
   .search {
     width: 268px;
     line-height: 30px;

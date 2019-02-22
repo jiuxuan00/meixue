@@ -19,6 +19,7 @@
   import Icon from "../base/icons/Icon";
 
   export default {
+    name: "CardActivity",
     props: {
       data: {
         type: Object,
@@ -40,10 +41,10 @@
         console.log(type);
         switch (type) {
           case "collection":
-            alert("我是收藏" + '---' + data.name);
+            alert("我是收藏" + "---" + data.name);
             break;
           case "view":
-            alert("我是浏览" + '---' + data.name);
+            alert("我是浏览" + "---" + data.name);
             break;
         }
       }

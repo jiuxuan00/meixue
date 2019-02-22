@@ -1,5 +1,5 @@
 <template>
-    <div class="full-list">
+    <div class="activity-mask">
         <div class="item">
             <img class="pic" :src="data.picUrl" alt="">
             <div class="main">
@@ -12,8 +12,6 @@
 </template>
 
 <script>
-
-
   export default {
     name: "FullList",
     props: {
@@ -30,5 +28,5 @@
 </script>
 
 <style lang="less">
-    @import "./../../assets/less/card/card_full.less";
+    @import "../../assets/less/card/card_activity_mask.less";
 </style>

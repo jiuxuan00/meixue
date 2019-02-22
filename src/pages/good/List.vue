@@ -1,6 +1,6 @@
 <template>
     <div class="good-list">
-        <good-header :data="header"></good-header>
+        <base-header :data="header"></base-header>
         <!--//End-->
 
         <div class="product-list">
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import GoodHeader from "../../components/header/GoodHeader";
+  import BaseHeader from "../../components/header/BaseHeader";
   import CardRecommend from "../../components/card/CardRecommend";
 
   const DOWN = "down";
@@ -26,24 +26,6 @@
     name: "List",
     data() {
       return {
-        options: {
-          scrollbar: {
-            fade: true
-          },
-          pullDownRefresh: {
-            threshold: 90,
-            stop: 50,
-            txt: "刷新成功"
-          },
-          pullUpLoad: {
-            threshold: 0,
-            txt: {
-              more: "加载更多",
-              noMore: "没有数据了"
-            }
-          },
-          click: true
-        },
         header: {
           title: "日用单品",
           search: false,
@@ -118,8 +100,30 @@
         ]
       };
     },
+    computed: {
+      options() {
+        return {
+          scrollbar: {
+            fade: true
+          },
+          pullDownRefresh: {
+            threshold: 90,
+            stop: 50,
+            txt: "刷新成功"
+          },
+          pullUpLoad: {
+            threshold: 0,
+            txt: {
+              more: "加载更多",
+              noMore: "没有数据了"
+            }
+          },
+          click: true
+        };
+      }
+    },
     components: {
-      GoodHeader,
+      BaseHeader,
       CardRecommend
     },
     mounted() {

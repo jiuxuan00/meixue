@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import CardActivity from "../card/Activity1";
+  import CardActivity from "../card/CardActivity";
 
   const DOWN = "down";
   const UP = "up";

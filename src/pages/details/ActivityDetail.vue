@@ -1,13 +1,13 @@
 <template>
     <div class="activity-detail">
-        <card-full :data="item" v-for="(item,index) in detail.banner" :key="index">
+        <card-activity :data="item" v-for="(item,index) in detail.banner" :key="index">
             <div slot="icons">
                 <div class="icons">
                     <icon className="white collection" :count="item.collection_count"/>
                     <icon className="white view" :count="item.view_count"/>
                 </div>
             </div>
-        </card-full>
+        </card-activity>
         <!--//End-->
         <div class="flags">
             <div class="item time"><span>2019年01月20日</span></div>
@@ -51,7 +51,7 @@
 
 <script>
   import Icon from "../../components/base/icons/Icon";
-  import CardFull from "../../components/card/Full";
+  import CardActivity from "../../components/card/CardActiviryMask";
 
   export default {
     name: "FindActivityDetail",
@@ -94,7 +94,7 @@
     },
     components: {
       Icon,
-      CardFull
+      CardActivity
     }
   };
 </script>

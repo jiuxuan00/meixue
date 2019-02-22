@@ -1,12 +1,12 @@
 <template>
     <div class="choice-detail">
-        <good-header :data="header">
+        <base-header :data="header">
             <img class="avatar" :src="detail.avatar" alt="">
             <div class="info">
                 <p class="name">{{detail.username}}</p>
                 <p class="time">{{detail.time}}</p>
             </div>
-        </good-header>
+        </base-header>
         <!--//End-->
 
         <div class="content" style="background: #eee;" v-html="detail.content"></div>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-  import GoodHeader from "../../components/header/GoodHeader";
+  import BaseHeader from "../../components/header/BaseHeader";
   import Icon from "../../components/base/icons/Icon";
   import Comment from "../../components/card/Comment";
 
@@ -55,7 +55,7 @@
     components: {
       Icon,
       Comment,
-      GoodHeader
+      BaseHeader
     },
     mounted() {
     },
@@ -81,5 +81,5 @@
 </script>
 
 <style lang="less">
-    @import "./../../assets/less/details/choice.less";
+    @import "../../assets/less/details/news.less";
 </style>
