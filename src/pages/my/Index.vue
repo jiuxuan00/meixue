@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>我的首页</h1>
+    <div class="my-index">
+        <router-view></router-view>
     </div>
 </template>
 

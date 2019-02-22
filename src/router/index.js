@@ -39,7 +39,15 @@ let router = new Router({
     },
 
     //我的
-    { path: "/my", name: "My", component: () => import("@/pages/my/Index") },
+    {
+      path: "/my", name: "My", component: () => import("@/pages/my/Index"),
+      children: [
+        {
+          path: "/my/message",
+          component: () => import("@/pages/my/Message")
+        }
+      ]
+    },
     // 登录
     { path: "/login", name: "Login", component: () => import("@/pages/form/Login") },
     // 注册

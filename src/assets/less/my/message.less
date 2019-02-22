@@ -1,0 +1,126 @@
+@import "./../base/index.less";
+
+.my-message {
+  .list {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 100px;
+    background: @colorF8;
+    float: left;
+
+    .ul {
+      width: 100%;
+      height: 100%;
+      padding: 7px 16px 16px;
+
+      .item {
+        width: 100%;
+        float: left;
+        margin-top: 16px;
+
+        .avatar {
+          width: 36px;
+          height: 36px;
+          float: left;
+        }
+
+        .text {
+          float: left;
+          margin-left: 12px;
+          max-width: 232px;
+          background: @white;
+          .border-radius(10px);
+          padding: 10px 5px;
+          position: relative;
+          font-size: 14px;
+          line-height: 20px;
+          color: @color4;
+          font-weight: 400;
+
+          &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 17px solid @white;
+            border-left: 17px solid transparent;
+            position: absolute;
+            left: -8.5px;
+            top: 0;
+          }
+        }
+
+        &.active {
+          .avatar {
+            float: right;
+          }
+
+          .text {
+            text-align: right;
+            float: right;
+            margin-right: 12px;
+
+            &:after {
+              border-left: none;
+              border-right: 17px solid transparent;
+              left: auto;
+              right: -10.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //对话框输入
+  .send {
+    width: 100%;
+    height: 44px;
+    padding: 10px 46px;
+    background: @white;
+    position: fixed;
+    left: 0;
+    bottom: 50px;
+    z-index: 2;
+    border-bottom: 1px solid rgba(153, 153, 153, .1);
+
+    .ipt {
+      width: 100%;
+      font-size: 14px;
+      line-height: 24px;
+      color: @titleColor;
+      float: left;
+    }
+
+    &:before {
+      content: '';
+      .icon24("../../images/my/message-send@3x.png");
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -12px;
+      margin-left: 12px;
+    }
+
+
+    .cube-upload {
+      position: absolute;
+      top:0;
+      right: 0;
+      .cube-upload-btn-def {
+        width: 24px;
+        height: 24px;
+        .icon24("../../images/my/message-img-upload@3x.png");
+        box-shadow:none;
+        margin-top: 10px;
+        margin-right: 14px;
+        i {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+}

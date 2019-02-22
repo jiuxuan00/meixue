@@ -20,11 +20,11 @@ import {
   // Textarea,
   // Select,
   // Switch,
-  Rate,
-  Validator,
-  // Upload,
-  Form,
-  Popup,
+  // Rate,
+  // Validator,
+  Upload,
+  // Form,
+  // Popup,
   // Toast,
   // Picker,
   // CascadePicker,
@@ -63,11 +63,11 @@ Vue.use(TabPanels);
 // Vue.use(Textarea)
 // Vue.use(Select)
 // Vue.use(Switch)
-Vue.use(Rate);
-Vue.use(Validator);
-// Vue.use(Upload)
-Vue.use(Form);
-Vue.use(Popup);
+// Vue.use(Rate);
+// Vue.use(Validator);
+Vue.use(Upload)
+// Vue.use(Form);
+// Vue.use(Popup);
 // Vue.use(Toast)
 // Vue.use(Picker)
 // Vue.use(CascadePicker)

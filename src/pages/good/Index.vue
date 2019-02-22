@@ -1,6 +1,6 @@
 <template>
     <div class="good">
-        <good-header :is-msg="true"></good-header>
+        <good-header :data="header"></good-header>
         <!--//End-->
 
         <div class="sidebar">
@@ -18,7 +18,8 @@
                 <div class="recommend">
                     <div class="title">推荐专区</div>
                     <ul class="items">
-                        <router-link tag="li" :to="{path:'/good/list', query:{id:item.id}}" class="item" v-for="(item,index) in recommend" :key="index">
+                        <router-link tag="li" :to="{path:'/good/list', query:{id:item.id}}" class="item"
+                                     v-for="(item,index) in recommend" :key="index">
                             <img class="pic" :src="item.picUrl" alt="">
                             <p class="txt">{{item.title}}</p>
                         </router-link>
@@ -50,7 +51,28 @@
     name: "GoodIndex",
     data() {
       return {
-        currentTabId: 0,
+        header: {
+          message:true,
+          search: true,
+          keywords: [
+            {
+              label: "热门搜索",
+              data: [
+                { id: 1, label: "购买详情", href: "/details/shop/1" },
+                { id: 2, label: "新闻详情", href: "/details/news/1" },
+                { id: 3, label: "活动详情", href: "/details/activity/1" }
+              ]
+            },
+            {
+              label: "历史搜索",
+              data: [
+                { id: 1, label: "购买详情222", href: "/details/shop/1" },
+                { id: 2, label: "新闻详情", href: "/details/news/1" },
+                { id: 3, label: "活动详情", href: "/details/activity/1" }
+              ]
+            }
+          ]
+        },
         //左侧导航
         tabs: [
           { label: "分类专区1", id: 1 },
@@ -77,12 +99,12 @@
         ],
         //推荐专区
         recommend: [
-          {id:'1', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装1" },
-          {id:'2', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装2" },
-          {id:'3', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装3" },
-          {id:'4', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装4" },
-          {id:'5', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装5" },
-          {id:'6', picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装6" }
+          { id: "1", picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装1" },
+          { id: "2", picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装2" },
+          { id: "3", picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装3" },
+          { id: "4", picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装4" },
+          { id: "5", picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装5" },
+          { id: "6", picUrl: "/static/pics/good/recommend1.jpg", title: "生活套装6" }
         ],
         //新上单品
         products: [
