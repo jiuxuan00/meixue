@@ -54,9 +54,13 @@ let router = new Router({
           path: "/my",
           component: () => import("@/pages/my/Index.vue")
         },
-        {
+        {//消息
           path: "/my/message",
           component: () => import("@/pages/my/Message.vue")
+        },
+        {
+          path:'/my/personal',
+          component:()=>import("@/pages/my/Personal.vue")
         }
       ]
     },

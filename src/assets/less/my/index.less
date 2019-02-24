@@ -37,20 +37,7 @@
         margin-top: 3px;
       }
 
-      .level {
-        width: 35px;
-        height: 13px;
-        .linearGradient(#BA0000, #F76E1D);
-        .border-radius(2px);
-        text-align: center;
-        line-height: 13px;
-        margin-top: 7px;
 
-        span {
-          color: @white;
-          font-size: 9px;
-        }
-      }
     }
 
     .more {
@@ -258,51 +245,6 @@
     width: 100%;
     float: left;
     border-top: 3px solid @colorF8;
-    .link {
-      width: 100%;
-      padding-left: 53px;
-      line-height: 50px;
-      border-bottom: 1px solid rgba(216,216,216,.3);
-      float: left;
-      position: relative;
 
-      &:before, &:after {
-        content: '';
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        top: 50%;
-        margin-top: -12px;
-      }
-      &:before {
-        left: 23px;
-      }
-      &:after {
-        right: 15px;
-        ._icon24('links-more');
-      }
-
-      &:nth-of-type(1) {
-        &:before {
-          ._icon24('links-1');
-        }
-      }
-      &:nth-of-type(2) {
-        &:before {
-          ._icon24('links-2');
-        }
-      }
-      &:nth-of-type(3) {
-        &:before {
-          ._icon24('links-3');
-        }
-      }
-      &:nth-of-type(4) {
-        &:before {
-          ._icon24('links-4');
-        }
-      }
-
-    }
   }
 }

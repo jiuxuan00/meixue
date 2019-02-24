@@ -4,9 +4,10 @@
             <img :src="info.avatar" alt="" class="avatar">
             <div class="main">
                 <p class="username">{{info.username}}</p>
-                <div class="level"><span>Lv.{{info.level}}</span></div>
+                <!--<div class="level"><span>Lv.{{info.level}}</span></div>-->
+                <level :level="12"></level>
             </div>
-            <router-link tag="a" to="/my" class="more"></router-link>
+            <router-link tag="a" to="/my/personal" class="more"></router-link>
         </div>
         <!--//End-->
 
@@ -57,38 +58,39 @@
         <!--//ENd-->
 
         <div class="links">
-            <div class="link"><span>积分中心</span></div>
-            <div class="link"><span>优惠券</span></div>
-            <div class="link"><span>地址管理</span></div>
-            <div class="link"><span>客服咨询</span></div>
+            <v-cell :data="link" v-for="(link,index) in links" :key="index"></v-cell>
         </div>
-
 
 
     </div>
 </template>
 
 <script>
+  import Level from "./../../components/my/Level";
+  import vCell from "./../../components/my/Cell";
+
   export default {
     name: "home",
     data() {
       return {
+        //用户信息
         info: {
           username: "旧轩",
           avatar: "/static/images/default/avatar-pink@3x.png",
           level: 10
         },
-
-
-        contentList: [
-          { name: "我的活动", path: "/personal/activity" },
-          { name: "浏览历史", path: "/personal/history" },
-          { name: "积分中心", path: "/personal/integral" },
-          { name: "优惠券", path: "/personal/coupon" },
-          { name: "地址管理", path: "/personal/address" },
-          { name: "客服咨询", path: "/personal/service" }
+        //
+        links: [
+          { label: "积分中心", iconUrl: "/static/images/my/links-1@3x.png", href: "/my/积分中心" },
+          { label: "优惠券", iconUrl: "/static/images/my/links-2@3x.png", href: "/my/优惠券" },
+          { label: "地址管理", iconUrl: "/static/images/my/links-3@3x.png", href: "/my/地址管理" },
+          { label: "客服咨询", iconUrl: "/static/images/my/links-4@3x.png", href: "/my/客服咨询" }
         ]
       };
+    },
+    components: {
+      Level,
+      vCell
     }
   };
 </script>
