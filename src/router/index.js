@@ -23,36 +23,40 @@ let router = new Router({
     {//发现
       path: "/find",
       name: "Find",
-      component: () => import("@/pages/find/Index")
+      component: () => import("@/pages/find/Index.vue")
     },
     //好物
     {
       path: "/good",
       name: "GoodIndex",
-      component: () => import("@/pages/good/Index")
+      component: () => import("@/pages/good/Index.vue")
     },
-    { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List") },
+    { path: "/good/list", name: "GoodList", component: () => import("@/pages/good/List.vue") },
     //详情
     {
       path: "/details",
       name: "Details",
       redirect: "/",
-      component: () => import("@/pages/details/Index"),
+      component: () => import("@/pages/details/Index.vue"),
       children: [
         //资讯类详情
-        { path: "/details/news/:id", component: () => import("@/pages/details/NewsDetail") },
-        { path: "/details/activity/:id", component: () => import("@/pages/details/ActivityDetail") },
-        { path: "/details/shop/:id", component: () => import("@/pages/details/ShopDetail") }
+        { path: "/details/news/:id", component: () => import("@/pages/details/NewsDetail.vue") },
+        { path: "/details/activity/:id", component: () => import("@/pages/details/ActivityDetail.vue") },
+        { path: "/details/shop/:id", component: () => import("@/pages/details/ShopDetail.vue") }
       ]
     },
 
     //我的
     {
-      path: "/my", name: "My", component: () => import("@/pages/my/Index"),
+      path: "/my", name: "My", component: () => import("@/pages/my/Router.vue"),
       children: [
         {
+          path: "/my",
+          component: () => import("@/pages/my/Index.vue")
+        },
+        {
           path: "/my/message",
-          component: () => import("@/pages/my/Message")
+          component: () => import("@/pages/my/Message.vue")
         }
       ]
     },

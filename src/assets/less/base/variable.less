@@ -60,3 +60,15 @@
   height: 24px;
   .back_images(@name, 24px, 24px);
 }
+
+//rgba的颜色色值以及透明度
+.rgbaC2(@r, @g, @b, @a) {
+  background: rgba(@r, @g, @b, @a);
+}
+
+//渐变
+.linearGradient(@color1, @color2) {
+  background: linear-gradient(to left, @color1, @color2);
+  background: -wekit-linear-gradient(to left, @color1, @color2);
+}
+
