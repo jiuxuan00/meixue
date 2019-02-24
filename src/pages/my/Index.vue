@@ -4,8 +4,7 @@
             <img :src="info.avatar" alt="" class="avatar">
             <div class="main">
                 <p class="username">{{info.username}}</p>
-                <!--<div class="level"><span>Lv.{{info.level}}</span></div>-->
-                <level :level="12"></level>
+                <level :level="info.level"></level>
             </div>
             <router-link tag="a" to="/my/personal" class="more"></router-link>
         </div>
@@ -21,16 +20,11 @@
         <div class="order">
             <div class="order-title">我的订单</div>
             <div class="items">
-                <div class="item"><i></i>
-                    <p>待付款</p></div>
-                <div class="item"><i></i>
-                    <p>待收货</p></div>
-                <div class="item"><i></i>
-                    <p>待评价</p></div>
-                <div class="item"><i></i>
-                    <p>售后/退款</p></div>
-                <div class="item"><i></i>
-                    <p>全部订单</p></div>
+                <router-link to="/my/order?type=0" tag="div" class="item"><i></i><p>待付款</p></router-link>
+                <router-link to="/my/order?type=1" tag="div" class="item"><i></i><p>待收货</p></router-link>
+                <router-link to="/my/order?type=2" tag="div" class="item"><i></i><p>待评价</p></router-link>
+                <router-link to="/my/order?type=3" tag="div" class="item"><i></i><p>售后/退款</p></router-link>
+                <router-link to="/my/order?type=4" tag="div" class="item"><i></i><p>全部订单</p></router-link>
             </div>
         </div>
         <!--//ENd-->
@@ -68,6 +62,7 @@
 <script>
   import Level from "./../../components/my/Level";
   import vCell from "./../../components/my/Cell";
+  import Router from "../details/Index";
 
   export default {
     name: "home",
@@ -77,7 +72,7 @@
         info: {
           username: "旧轩",
           avatar: "/static/images/default/avatar-pink@3x.png",
-          level: 10
+          level: 97
         },
         //
         links: [
@@ -89,6 +84,7 @@
       };
     },
     components: {
+      Router,
       Level,
       vCell
     }

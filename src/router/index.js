@@ -61,6 +61,10 @@ let router = new Router({
         {
           path:'/my/personal',
           component:()=>import("@/pages/my/Personal.vue")
+        },
+        {
+          path:'/my/order',
+          component:()=>import("@/pages/my/Order.vue")
         }
       ]
     },
