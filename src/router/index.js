@@ -72,6 +72,10 @@ let router = new Router({
             footer: 0
           },
           component: () => import("@/pages/my/Release.vue")
+        },
+        {//标识单品
+          path: "/my/single",
+          component: () => import("@/pages/my/Single.vue")
         }
       ]
     },

@@ -7,75 +7,103 @@
   float: left;
   background: @colorF5;
 
-  .main {
+  .item {
     width: 100%;
-    padding: 20px;
     float: left;
     background: @white;
 
-    .content {
+    .ipt {
       width: 100%;
-      height: 190px;
+      padding: 0 20px;
+      line-height: 64px;
+      font-size: 16px;
       float: left;
-      border-bottom: 1px solid @colorD8;
-      font-size: 14px;
-      color: @titleColor;
-
-      &::-webkit-input-placeholder {
-        color: @grayColor;
-      }
+      border-bottom: 2px solid @colorF5;
     }
 
-    .item {
+    .content {
       width: 100%;
+      padding: 0 20px;
       float: left;
       margin-top: 10px;
+      position: relative;
+      border-bottom: 2px solid @colorF8;
 
+      .cube-upload {
+        .cube-upload-file, .cube-upload-btn {
+          margin: 0;
+          width: 42px;
+          height: 42px;
+        }
 
-      .cube-upload-file, .cube-upload-btn {
-        margin: 0;
-        width: 42px;
-        height: 42px;
-      }
+        .cube-upload-file {
+          margin-right: 10px;
+        }
 
-      .cube-upload-file {
-        margin-right: 10px;
-      }
+        .cube-upload-file-def, .cube-upload-btn-def {
+          width: 42px;
+          height: 42px;
+          box-shadow: none;
+        }
 
-      .cube-upload-file-def, .cube-upload-btn-def {
-        width: 42px;
-        height: 42px;
-        box-shadow: none;
-      }
+        .cube-upload-btn-def {
+          i {
+            .icon24('../../images/my/icon-upload@3x.png');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -12px;
+            margin-top: -12px;
 
-      .cube-upload-btn-def {
-        i {
-          .icon24('../../images/my/icon-upload@3x.png');
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin-left: -12px;
-          margin-top: -12px;
+            &:after, &:before {
+              display: none;
+            }
+          }
 
-          &:after, &:before {
-            display: none;
+          &:after {
+            border-color: @color97;
           }
         }
 
-        &:after {
-          border-color: @color97;
+        .cube-upload-file-status.cubeic-right::after, .cube-upload-file-status.cubeic-warn::after {
+          display: none;
         }
       }
 
-      .cube-upload-file-status.cubeic-right::after, .cube-upload-file-status.cubeic-warn::after {
-        display: none;
+      .text {
+        width: 100%;
+        height: 72px;
+        line-height: 16px;
+        float: left;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid @colorF8;
+        font-size: 14px;
+        color: @grayColor;
+        text-indent: 34px;
+
+        &::-webkit-input-placeholder {
+          color: @grayColor;
+        }
       }
 
-      .cube-upload-btn-def > i::before, .cube-upload-btn-def > i::after {
-
+      .icon-edit {
+        .icon24('../../images/my/icon-edit@3x.png');
+        position: absolute;
+        top: 58px;
+        left: 20px;
       }
-
     }
+  }
+
+  .add {
+    width: 100%;
+    line-height: 80px;
+    padding: 0 20px;
+    float: left;
+    font-size: 14px;
+    background: @white;
+    color: @color97;
   }
 
   .publish {
