@@ -59,12 +59,19 @@ let router = new Router({
           component: () => import("@/pages/my/Message.vue")
         },
         {
-          path:'/my/personal',
-          component:()=>import("@/pages/my/Personal.vue")
+          path: "/my/personal",
+          component: () => import("@/pages/my/Personal.vue")
         },
         {
-          path:'/my/order',
-          component:()=>import("@/pages/my/Order.vue")
+          path: "/my/order",
+          component: () => import("@/pages/my/Order.vue")
+        },
+        {//发布动态
+          path: "/my/release",
+          meta: {
+            footer: 0
+          },
+          component: () => import("@/pages/my/Release.vue")
         }
       ]
     },

@@ -20,19 +20,28 @@
         <div class="order">
             <div class="order-title">我的订单</div>
             <div class="items">
-                <router-link to="/my/order?type=0" tag="div" class="item"><i></i><p>待付款</p></router-link>
-                <router-link to="/my/order?type=1" tag="div" class="item"><i></i><p>待收货</p></router-link>
-                <router-link to="/my/order?type=2" tag="div" class="item"><i></i><p>待评价</p></router-link>
-                <router-link to="/my/order?type=3" tag="div" class="item"><i></i><p>售后/退款</p></router-link>
-                <router-link to="/my/order?type=4" tag="div" class="item"><i></i><p>全部订单</p></router-link>
+                <router-link to="/my/order?type=1" tag="div" class="item"><i></i>
+                    <p>待付款</p></router-link>
+                <router-link to="/my/order?type=2" tag="div" class="item"><i></i>
+                    <p>待收货</p></router-link>
+                <router-link to="/my/order?type=3" tag="div" class="item"><i></i>
+                    <p>待评价</p></router-link>
+                <router-link to="/my/order?type=4" tag="div" class="item"><i></i>
+                    <p>售后/退款</p></router-link>
+                <router-link to="/my/order?type=0" tag="div" class="item"><i></i>
+                    <p>全部订单</p></router-link>
             </div>
         </div>
         <!--//ENd-->
 
         <div class="release">
-            <div class="order-title">我的发布<a class="more" href="">查看全部</a></div>
+            <div class="order-title">我的发布
+                <router-link class="more" to="/my/release">查看全部</router-link>
+            </div>
             <div class="items">
-                <div class="item active"><span class="txt">发布最新动态</span></div>
+                <router-link class="item active" to="/my/release">
+                    <span class="txt">发布最新动态</span>
+                </router-link>
                 <div class="item"><img src="/static/pics/my/release1.jpg" alt=""></div>
                 <div class="item"><img src="/static/pics/my/release2.jpg" alt=""></div>
                 <div class="item"><img src="/static/pics/my/release3.jpg" alt=""></div>

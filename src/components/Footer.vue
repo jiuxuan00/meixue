@@ -23,15 +23,8 @@
         show: true
       };
     },
-    watch: {
-      $route(to, from) {
-        const arr = ["FindChoice", "FindActivity"];
-        if (arr.indexOf(to.name) > -1) {
-          this.show = false;
-        } else {
-          this.show = true;
-        }
-      }
+    beforeMount() {
+      this.show = this.$route.meta.footer ? true : false;
     },
     methods: {
       clickHandler(label) {

@@ -3,6 +3,7 @@
 .my-order {
   width: 100%;
   padding-top: 44px;
+  padding-bottom: 52px;
   float: left;
   background: @colorF8;
 
@@ -73,6 +74,47 @@
             line-height: 25px;
             margin-top: 37px;
             margin-bottom: 6px;
+          }
+        }
+      }
+
+      .may-like {
+        .title {
+          width: 100%;
+          position: relative;
+          float: left;
+          text-align: center;
+
+          span {
+            position: relative;
+            height: 24px;
+            line-height: 26px;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 24px;
+            &:before {
+              content: '';
+              width: 24px;
+              height: 24px;
+              .icon24('../../images/my/may-like@3x.png');
+              position: absolute;
+              top: 0;
+              left: -24px;
+            }
+          }
+        }
+
+        .list {
+          width: 100%;
+          float: left;
+          margin-top: 13px;
+          .card-list {
+            width: 170px;
+            margin-left: 12px;
+            margin-bottom: 12px;
+            .title {
+              text-align: left;
+            }
           }
         }
       }

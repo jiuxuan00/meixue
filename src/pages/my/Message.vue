@@ -2,6 +2,7 @@
     <div class="my-message">
         <base-header :data="header"></base-header>
         <!--//End-->
+
         <div class="main">
             <div class="list" id="list">
                 <ul class="ul" ref="scrollPics">

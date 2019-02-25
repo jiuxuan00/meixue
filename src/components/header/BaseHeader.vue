@@ -4,7 +4,7 @@
         <!--//End-->
         <div class="search" v-if="data.search">
             <input class="ipt" @focus="onHanldeFocus" type="text" value="" placeholder="搜索">
-            <div class="suggest" v-if="data.keywords">
+            <div class="suggest" v-if="data.keywords && isSuggest">
                 <dl class="list" v-for="(item,index) in data.keywords" :key="index">
                     <dt>{{item.label}}</dt>
                     <dd>
